@@ -5,9 +5,14 @@
 # ☄️ Effector FSP
 
 ```mermaid
-graph TD;
-    Filter-->Sort;
-    Sort-->Paginate;
+flowchart LR
+  subgraph Combine
+    direction LR
+    Filter --> Sort
+    Sort --> Paginate
+  end
+  Data -.-> Combine
+  Combine -.-> FSP
 ```
 
 ```ts
