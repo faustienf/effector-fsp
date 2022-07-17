@@ -17,7 +17,7 @@ export const TableFilter: FC<Props> = memo(({ column }) => {
   return (
     <input
       placeholder="Search..."
-      className="form-control-plaintext form-control-sm"
+      className="block w-full text-sm font-normal py-1 outline-0 border-b-2 border-transparent focus:border-indigo-500"
       value={value}
       onChange={(e) => filters.filterChanged([column, e.target.value])}
     />

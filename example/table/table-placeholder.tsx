@@ -12,10 +12,8 @@ export const TablePlaceholder: FC = memo(() => {
       {Array.from({ length: recordsPerPage }, (_, index) => (
         <tr key={index}>
           {columns.map((column) => (
-            <td key={column}>
-              <div className="placeholder-wave">
-                <span className="placeholder col-6 rounded-pill"></span>
-              </div>
+            <td key={column} className="py-3 px-2">
+              <span className="flex w-1/2 h-4 bg-slate-300 rounded-full" />
             </td>
           ))}
         </tr>

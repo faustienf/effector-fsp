@@ -11,14 +11,12 @@ const todoTableStore = createTodoTable();
 const App = () => {
   return (
     <div
-      className="card mt-5 shadow-lg"
+      className="bg-white p-6 shadow-2xl shadow-indigo-900/50 mt-16 rounded-2xl"
       style={{
         maxWidth: 900,
       }}
     >
-      <div className="card-body">
-        <Table store={todoTableStore} />
-      </div>
+      <Table store={todoTableStore} />
     </div>
   );
 };

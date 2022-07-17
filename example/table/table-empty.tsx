@@ -7,12 +7,12 @@ export const TableEmpty: FC = memo(() => {
   const columns = useStore($columns);
 
   return (
-    <tr className="bg-light">
+    <tr>
       <td
         colSpan={columns.length}
-        className="text-center text-muted fst-italic"
+        className="bg-slate-50 p-5 text-center font-extralight text-sm italic"
       >
-        <small>No Data</small>
+        No Data
       </td>
     </tr>
   );

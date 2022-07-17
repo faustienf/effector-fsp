@@ -17,10 +17,10 @@ export const Table = <R extends Record<string, unknown>>({
   return (
     <TableProvider value={store}>
       <table
-        className="table table-borderless m-0"
-        style={{ tableLayout: 'fixed' }}
+        className="table w-full table-fixed text-base text-slate-900"
+        style={{ captionSide: 'bottom' }}
       >
-        <caption>
+        <caption className="mt-3">
           <TablePagination />
         </caption>
         <colgroup>

@@ -13,7 +13,9 @@ export const TableRows: FC = memo(() => {
     fn: (record) => (
       <tr>
         {columns.map((column) => (
-          <td key={column}>{String(record[column])}</td>
+          <td key={column} className="text-base p-2">
+            {String(record[column])}
+          </td>
         ))}
       </tr>
     ),

@@ -11,7 +11,7 @@ export const TableColumns: FC = memo(() => {
   return (
     <tr>
       {columns.map((column) => (
-        <th key={column}>
+        <th key={column} className="text-left px-2">
           <TableTitle column={column} />
           <TableFilter column={column} />
         </th>

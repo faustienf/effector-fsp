@@ -14,7 +14,7 @@ export const TableTitle: FC<Props> = memo(({ column }) => {
 
   return (
     <span
-      className="text-capitalize"
+      className="capitalize font-medium"
       role="button"
       tabIndex={0}
       onClick={() => sortedBy(column)}

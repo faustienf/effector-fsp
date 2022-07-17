@@ -21,28 +21,26 @@ export const TablePagination: FC = memo(() => {
     recordsPerPageChanged(parseInt(e.target.value));
 
   return (
-    <div className="d-flex align-items-center justify-content-between">
-      <div className="d-flex align-items-center fw-light gap-2">
-        <small>{`Showing ${recordsRange} ${allRecordsCount} rows.`}</small>
-        <div>
-          <select
-            defaultValue={recordsPerPage}
-            onChange={handleChange}
-            className="form-control-plaintext form-control-sm"
-          >
-            {[5, 10, 15].map((value) => (
-              <option key={value} value={value}>
-                {value}
-              </option>
-            ))}
-          </select>
-        </div>
-        <small>rows per page</small>
+    <div className="flex items-center justify-between">
+      <div className="flex items-center text-sm text-slate-500 gap-2">
+        <span>{`Showing ${recordsRange} ${allRecordsCount} rows.`}</span>
+        <select
+          defaultValue={recordsPerPage}
+          onChange={handleChange}
+          className="text-slate-900 outline-0 border-b-2 border-transparent focus:border-indigo-500 cursor-pointer"
+        >
+          {[5, 10, 15].map((value) => (
+            <option key={value} value={value}>
+              {value}
+            </option>
+          ))}
+        </select>
+        <span>rows per page.</span>
       </div>
-      <div className="d-flex gap-3">
+      <div className="flex gap-3">
         <button
           type="button"
-          className="btn btn-light btn-sm"
+          className="inline-flex items-center h-7 px-4 bg-slate-100 disabled:opacity-50 text-sm rounded-full leading-none cursor-pointer focus:outline outline-indigo-500 focus:outline-offset-2"
           disabled={isFirstPage}
           onClick={previousPageSwitched}
         >
@@ -51,7 +49,7 @@ export const TablePagination: FC = memo(() => {
 
         <button
           type="button"
-          className="btn btn-light btn-sm"
+          className="inline-flex items-center h-7 px-4 bg-slate-100 disabled:opacity-50 text-sm rounded-full leading-none cursor-pointer focus:outline outline-indigo-500 focus:outline-offset-2"
           disabled={isLastPage}
           onClick={nextPageSwitched}
         >
