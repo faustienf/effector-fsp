@@ -22,7 +22,7 @@ const filters = createFilters($todos, (todo, field, value) =>
 );
 ```
 
-#### Sorting
+#### Sort
 
 ```ts
 const sorting = createSorting({
@@ -33,7 +33,7 @@ const sorting = createSorting({
 });
 ```
 
-#### Pagination
+#### Paginate
 
 ```ts
 const pagination = createPagination(sorting.$sortedRecords, 10);
