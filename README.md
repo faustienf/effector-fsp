@@ -4,6 +4,12 @@
 
 # ☄️ Effector FSP
 
+```mermaid
+graph TD;
+    Filter-->Sort;
+    Sort-->Paginate;
+```
+
 ```ts
 const $todos = createStore<Todo[]>([]);
 ```
