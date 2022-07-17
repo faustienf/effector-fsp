@@ -13,8 +13,8 @@ export const TablePlaceholder: FC = memo(() => {
         <tr key={index}>
           {columns.map((column) => (
             <td key={column}>
-              <div className="placeholder-glow">
-                <span className="placeholder col-6"></span>
+              <div className="placeholder-wave">
+                <span className="placeholder col-6 rounded-pill"></span>
               </div>
             </td>
           ))}

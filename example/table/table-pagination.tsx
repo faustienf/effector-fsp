@@ -42,7 +42,7 @@ export const TablePagination: FC = memo(() => {
       <div className="d-flex gap-3">
         <button
           type="button"
-          className="btn btn-outline-primary btn-sm"
+          className="btn btn-light btn-sm"
           disabled={isFirstPage}
           onClick={previousPageSwitched}
         >
@@ -51,7 +51,7 @@ export const TablePagination: FC = memo(() => {
 
         <button
           type="button"
-          className="btn btn-outline-primary btn-sm"
+          className="btn btn-light btn-sm"
           disabled={isLastPage}
           onClick={nextPageSwitched}
         >
